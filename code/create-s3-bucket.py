@@ -8,7 +8,7 @@ client = boto3.client('s3')
 
 response = client.create_bucket(
     ACL='private',
-    Bucket='google-news-outgoing-f1',
+    Bucket='XXX',
 )
 
 print(response)
