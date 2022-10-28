@@ -105,10 +105,3 @@ def send_email():
 # def lambda_handler(event, context):
 send_email()
 print('statuscode:200')
-
-# # Create Pandas DataFrame
-# df =pd.DataFrame(all_articles['articles'])
-# df.sort_values(by=['publishedAt'], ascending=True)
-# # Save DataFrame to CSV
-
-# df.to_csv(str(datetime.now(timezone.utc)) + '-' + search + '-'+'news.csv')
