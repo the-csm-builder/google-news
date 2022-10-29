@@ -1,6 +1,5 @@
 from datetime import date, datetime, timezone, timedelta
 from newsapi import NewsApiClient
-import pandas as pd
 import os
 from json2html import *
 import boto3
@@ -104,4 +103,4 @@ def send_email():
 
 # def lambda_handler(event, context):
 send_email()
-print('statuscode:200')
+print('Done')
