@@ -10,10 +10,10 @@ dt = date.today()
 iso_date = dt.isoformat()
 date_formatted = dt.strftime("%B %d, %Y")
 # News API
-newsapi = NewsApiClient(api_key='XXXX')
-search = 'XXXX'
+newsapi = NewsApiClient(api_key='xxxx')
+search = 'xxx'
 
-from_date = datetime.now(timezone.utc) + timedelta(days=-7)
+from_date = datetime.now(timezone.utc) + timedelta(days=-3)
 end_time = datetime.now(timezone.utc) + timedelta(days=0)
 
 # /v2/everything
@@ -29,9 +29,8 @@ all_articles = newsapi.get_everything(q=search,
 # convert json to html
 bodyconverted = json2html.convert(json=all_articles)
 
-
 def send_email():
-    SENDER = "XXXX"  # must be verified in AWS SES Email
+    SENDER = "XXX"  # must be verified in AWS SES Email
     RECIPIENT = "XXX"  # must be verified in AWS SES Email
     RECIPIENT2 = "XXX" # must be verified in AWS SES Email
 
@@ -99,7 +98,7 @@ def send_email():
         print("Email sent! Message ID:"),
         print(response['MessageId'])
 
-# #uncomment this labmda when moving it to AWS. Will run in container image in lambda
+# uncomment this labmda when moving it to AWS. Will run in container image in lambda
 
 # def lambda_handler(event, context):
 send_email()
