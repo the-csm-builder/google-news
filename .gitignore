@@ -1,5 +1,3 @@
 /.DS_Store
-/get-news-brand-notebook.ipynb
-/Dockerfile
 get-secret.py
 get-newscatcher.py
